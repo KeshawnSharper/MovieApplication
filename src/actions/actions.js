@@ -53,7 +53,7 @@ export function getTopRated() {
       )
       .then((res) => {
         dispatch({ type: "GET_TOP_RATED", topRated: res.data });
-      });
+      })
   };
 }
 export function getMovieInfo(id) {
