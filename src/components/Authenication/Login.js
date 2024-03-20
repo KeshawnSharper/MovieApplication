@@ -29,9 +29,10 @@ function Login (props){
     setLoading(true)
     console.log(user)
     axios
-      .post(`http://localhost:5000/login`, user)
+      .post(`https://serene-ravine-68181-ca164f589b52.herokuapp.com/login`, user)
       .then((res) => {
         setLoading(false)
+        console.log(res,"res")
         console.log("user",res.data)
         localStorage.setItem(`token`, res.data.token);
         localStorage.setItem(`id`, res.data.user.id);
@@ -48,7 +49,7 @@ function Login (props){
       })
   };
   const submitGoogleUser = (user) => {
-              axios.post(`http://localhost:5000/loginGoogle/google_${JSON.parse(localStorage.getItem("google_temp_user")).googleId}`,JSON.parse(localStorage.getItem("google_temp_user")))
+              axios.post(`https://pakkpcfd88.execute-api.us-east-2.amazonaws.com/default/movie-application-be/loginGoogle/google_${JSON.parse(localStorage.getItem("google_temp_user")).googleId}`,JSON.parse(localStorage.getItem("google_temp_user")))
                 .then((res) => {
                   localStorage.setItem(`id`, res.data.id);
                   localStorage.setItem(`token`, res.data.token);
@@ -64,7 +65,7 @@ function Login (props){
   const submitFacebookUser = (user) => {
     console.log("hi")
     if (localStorage.getItem("Facebook_Temp_User")){
-   axios.post(`http://localhost:5000/loginFacebook/Facebook_${JSON.parse(localStorage.getItem("Facebook_Temp_User")).id}`,JSON.parse(localStorage.getItem("Facebook_Temp_User")))
+   axios.post(`https://pakkpcfd88.execute-api.us-east-2.amazonaws.com/default/movie-application-be/loginFacebook/Facebook_${JSON.parse(localStorage.getItem("Facebook_Temp_User")).id}`,JSON.parse(localStorage.getItem("Facebook_Temp_User")))
    .then(res => {
 console.log()
     localStorage.setItem("user",res.data)

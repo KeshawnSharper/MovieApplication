@@ -18,7 +18,8 @@ class MovieCard extends Component {
     const { movie, list,user } = this.props;
     let stars_earned = [];
     let stars_not_earned = [];
-    for (let i = 1; i <= 5 - (10 - Math.floor(movie.vote_average)); i++) {
+    for (let i = 1; i <= 5 - (10 -Math.round((movie.vote_average + Number.EPSILON) * 100) / 100
+    ); i++) {
       stars_earned.push(i);
     }
     if (stars_earned.length === 0) {

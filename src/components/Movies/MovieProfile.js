@@ -92,7 +92,8 @@ const MovieProfile = (props) => {
     <>
       <h1 onClick={() => handleOpen()} style={{cursor:"pointer"}}>{movie.title}</h1>
       <p>(Click on title to view profile)</p>
-      <p>{list === "recommended" ? movie.vote_average : movie.vote_average}</p>
+      <p>{list === "recommended" ? Math.round((movie.vote_average + Number.EPSILON) * 100) / 100
+ : Math.round((movie.vote_average + Number.EPSILON) * 100) / 100}</p>
       <div>
         {stars_earned.map((star) => (
           // <FontAwesomeIcon icon={faStar} color="Gold" />

@@ -43,10 +43,10 @@ function Register (props) {
     }
     setLoading(true)
     axios
-      .post("http://localhost:5000/register", user)
+      .post("https://serene-ravine-68181-ca164f589b52.herokuapp.com/register", user)
       .then((res) => {
         console.log("register successful",res)
-        axios.post(`http://localhost:5000/login`, {"email":user.email,"password":user.password}).then((res) => {
+        axios.post(`https://serene-ravine-68181-ca164f589b52.herokuapp.com/login`, {"email":user.email,"password":user.password}).then((res) => {
         setLoading(false)
         localStorage.setItem(`token`, res.data.token);
         localStorage.setItem(`id`, res.data.user.id);

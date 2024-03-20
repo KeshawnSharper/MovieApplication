@@ -7,7 +7,7 @@ const ProtectedRoute = (props) => {
     <Route
       {...rest}
       render={(renderProps) => {
-        if (localStorage.getItem("token")) {
+        if (localStorage.getItem("token") && localStorage.getItem("user")) {
           return <Component {...renderProps} />;
         } else {
           return <Navigate to="/" />;
