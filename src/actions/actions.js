@@ -78,7 +78,7 @@ export function getFavorites() {
         console.log("obj",obj)
         dispatch({ type: "GET_FAVORITES", payload: res.data.movies,obj:obj });
       });
-  }; 
+  }
 }
 export function addFavorite(movie) {
   console.log(movie)
