@@ -70,7 +70,7 @@ export function getMovieInfo(id) {
 export function getFavorites() {
   console.log("getFavorties",JSON.parse(localStorage.getItem("user")).id)
   return (dispatch) => {
-    axios.get(`https://serene-ravine-68181-ca164f589b52.herokuapp.com/savedMovies/${localStorage.getItem("id")}`)
+    axios.get(`https://movie-app-be-bsn.vercel.app/ savedMovies/${localStorage.getItem("id")}`)
       .then((res) => {
         let obj = {}
         console.log("res.data",res.data)
@@ -84,7 +84,7 @@ export function addFavorite(movie) {
   console.log(movie)
   return (dispatch) => {
     axios
-      .post(`https://serene-ravine-68181-ca164f589b52.herokuapp.com/savedMovies`, movie)
+      .post(`https://movie-app-be-bsn.vercel.app/ savedMovies`, movie)
       .then((res) => {
         let obj = {}
         console.log("res.data",res.data)
@@ -99,7 +99,7 @@ export function deleteFavorite(movie_id) {
   return (dispatch) => {
     axios
       .delete(
-        `https://serene-ravine-68181-ca164f589b52.herokuapp.com/savedMovies/${movie_id}`)
+        `https://movie-app-be-bsn.vercel.app/ savedMovies/${movie_id}`)
       .then((res) => {
         let obj = {}
         console.log("res.data",res.data)
@@ -123,7 +123,7 @@ export function recommedations(movie, recommended_movie) {
   };
 
   axios
-    .post(`https://serene-ravine-68181-ca164f589b52.herokuapp.com/recommendedMovies`, new_movie)
+    .post(`https://movie-app-be-bsn.vercel.app/ recommendedMovies`, new_movie)
     .then((res) => {
       console.log(res.data);
     });
@@ -132,7 +132,7 @@ export function deleteRecommedations(movie_id) {
   return (dispatch) => {
     axios
       .delete(
-        `https://serene-ravine-68181-ca164f589b52.herokuapp.com/${movie_id}/${Number(
+        `https://movie-app-be-bsn.vercel.app/ ${movie_id}/${Number(
           localStorage.getItem("id")
         )}`
       )
@@ -147,7 +147,7 @@ export function getUser() {
   return (dispatch) => {
     axios
       .get(
-        `https://serene-ravine-68181-ca164f589b52.herokuapp.com/users/${localStorage.getItem("id")}`
+        `https://movie-app-be-bsn.vercel.app/ users/${localStorage.getItem("id")}`
       )
       .then((res) => {
         console.log(res.data)
@@ -159,7 +159,7 @@ export function editUser(user) {
   
   return (dispatch) => {
     axios
-      .put(`https://serene-ravine-68181-ca164f589b52.herokuapp.com/users/${localStorage.getItem("id")}`, user)
+      .put(`https://movie-app-be-bsn.vercel.app/ users/${localStorage.getItem("id")}`, user)
       .then((res) => {
         localStorage.setItem("user",JSON.stringify(user))
         dispatch({ type: "UPDATE_USER", updated_user: res.data.user});

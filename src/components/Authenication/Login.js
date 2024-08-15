@@ -29,7 +29,7 @@ function Login (props){
     setLoading(true)
     console.log(user)
     axios
-      .post(`https://serene-ravine-68181-ca164f589b52.herokuapp.com/login`, user)
+      .post(`https://movie-app-be-bsn.vercel.app/ login`, user)
       .then((res) => {
         setLoading(false)
         console.log(res,"res")
