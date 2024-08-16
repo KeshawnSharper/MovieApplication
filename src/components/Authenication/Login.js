@@ -29,7 +29,7 @@ function Login (props){
     setLoading(true)
     console.log(user)
     axios
-      .post(`https://movie-app-be-bsn.vercel.app/login`, user)
+      .post(`https://movie-app-be-1.onrender.com/login`, user)
       .then((res) => {
         setLoading(false)
         console.log(res,"res")
