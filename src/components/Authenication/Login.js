@@ -38,8 +38,8 @@ function Login (props){
         localStorage.setItem(`id`, res.data.user.id);
         localStorage.setItem(`email`, res.data.user.email);
         localStorage.setItem(`user`, JSON.stringify(res.data.user));
-        navigate("/home");
-        window.location.reload(false);
+        // navigate("/home");
+        // window.location.reload(false);
       })
       .catch(err => {
         console.log(err)
