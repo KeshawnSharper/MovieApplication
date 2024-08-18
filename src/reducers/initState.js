@@ -11,4 +11,4 @@ const initState = {
   recommended: [],
   favorite_obj:{}
 };
-export default initState;
+export default initState

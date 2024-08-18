@@ -43,10 +43,10 @@ function Register (props) {
     }
     setLoading(true)
     axios
-      .post("https://serene-ravine-68181-ca164f589b52.herokuapp.com/register", user)
+      .post("https://us-central1-movieappfunctions1.cloudfunctions.net/expressApi/register", user)
       .then((res) => {
         console.log("register successful",res)
-        axios.post(`https://serene-ravine-68181-ca164f589b52.herokuapp.com/login`, {"email":user.email,"password":user.password}).then((res) => {
+        axios.post(`https://us-central1-movieappfunctions1.cloudfunctions.net/expressApi/login`, {"email":user.email,"password":user.password}).then((res) => {
         setLoading(false)
         localStorage.setItem(`token`, res.data.token);
         localStorage.setItem(`id`, res.data.user.id);

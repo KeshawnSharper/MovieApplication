@@ -1,0 +1,37 @@
+[debug] [2024-08-17T23:51:43.200Z] ----------------------------------------------------------------------
+[debug] [2024-08-17T23:51:43.204Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\kshar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2024-08-17T23:51:43.205Z] CLI Version:   13.15.2
+[debug] [2024-08-17T23:51:43.205Z] Platform:      win32
+[debug] [2024-08-17T23:51:43.205Z] Node Version:  v20.16.0
+[debug] [2024-08-17T23:51:43.205Z] Time:          Sat Aug 17 2024 19:51:43 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-08-17T23:51:43.205Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-17T23:51:43.409Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-17T23:51:43.411Z] > authorizing via signed-in user (awskeshawn@gmail.com)
+[debug] [2024-08-17T23:51:43.411Z] [iam] checking project movieapplicationfe for permissions ["firebase.projects.get"]
+[debug] [2024-08-17T23:51:43.414Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/movieapplicationfe:testIamPermissions [none]
+[debug] [2024-08-17T23:51:43.414Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/movieapplicationfe:testIamPermissions x-goog-quota-user=projects/movieapplicationfe
+[debug] [2024-08-17T23:51:43.415Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/movieapplicationfe:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-08-17T23:51:44.327Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/movieapplicationfe:testIamPermissions 200
+[debug] [2024-08-17T23:51:44.328Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/movieapplicationfe:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-08-17T23:51:44.329Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/movieapplicationfe [none]
+[debug] [2024-08-17T23:51:45.533Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/movieapplicationfe 200
+[debug] [2024-08-17T23:51:45.534Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/movieapplicationfe {"projectId":"movieapplicationfe","projectNumber":"1090561420949","displayName":"movieapplicationfe","name":"projects/movieapplicationfe","resources":{"hostingSite":"movieapplicationfe"},"state":"ACTIVE","etag":"1_1a4ed165-618d-499a-b653-2a759e6d3f14"}
+[info] 
+[info] === Serving from 'C:\Users\kshar\Documents\MovieApplication\frontend'...
+[info] 
+[debug] [2024-08-17T23:51:45.539Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/movieapplicationfe/sites 
+[debug] [2024-08-17T23:51:46.588Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/movieapplicationfe/sites 200
+[debug] [2024-08-17T23:51:46.588Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/movieapplicationfe/sites {"sites":[{"name":"projects/movieapplicationfe/sites/movieapplicationfe","defaultUrl":"https://movieapplicationfe.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-08-17T23:51:46.589Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/movieapplicationfe/webApps/-/config [none]
+[debug] [2024-08-17T23:51:47.338Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/movieapplicationfe/webApps/-/config 200
+[debug] [2024-08-17T23:51:47.339Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/movieapplicationfe/webApps/-/config {"projectId":"movieapplicationfe","storageBucket":"movieapplicationfe.appspot.com","apiKey":"AIzaSyDIb3lZU59V2UhQVjAIQeNPJQmoDKt2Km4","authDomain":"movieapplicationfe.firebaseapp.com","messagingSenderId":"1090561420949"}
+[debug] [2024-08-17T23:51:47.350Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/movieapplicationfe [none]
+[debug] [2024-08-17T23:51:47.594Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/movieapplicationfe 200
+[debug] [2024-08-17T23:51:47.595Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/movieapplicationfe {"projectId":"movieapplicationfe","projectNumber":"1090561420949","displayName":"movieapplicationfe","name":"projects/movieapplicationfe","resources":{"hostingSite":"movieapplicationfe"},"state":"ACTIVE","etag":"1_1a4ed165-618d-499a-b653-2a759e6d3f14"}
+[info] i  hosting[movieapplicationfe]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting[movieapplicationfe]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [17/Aug/2024:23:51:57 +0000] "GET / HTTP/1.1" 200 644 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [17/Aug/2024:23:51:57 +0000] \"GET / HTTP/1.1\" 200 644 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [17/Aug/2024:23:51:58 +0000] "GET /static/css/main.a44d82ab.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [17/Aug/2024:23:51:58 +0000] \"GET /static/css/main.a44d82ab.css HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [17/Aug/2024:23:51:58 +0000] "GET /static/js/main.887a328c.js HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [17/Aug/2024:23:51:58 +0000] \"GET /static/js/main.887a328c.js HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36\""}}
+[info] Shutting down...
