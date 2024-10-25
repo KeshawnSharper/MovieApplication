@@ -29,7 +29,7 @@ function Login (props){
     setLoading(true)
     console.log(user)
     axios
-      .post(`https://us-central1-movieappfunctions1.cloudfunctions.net/expressApi/login`, user)
+      .post(`https://api-102678697812.us-central1.run.app/login`, user)
       .then((res) => {
         setLoading(false)
         console.log(res,"res")

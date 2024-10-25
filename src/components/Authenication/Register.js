@@ -43,10 +43,10 @@ function Register (props) {
     }
     setLoading(true)
     axios
-      .post("https://us-central1-movieappfunctions1.cloudfunctions.net/expressApi/register", user)
+      .post("https://api-102678697812.us-central1.run.app/register", user)
       .then((res) => {
         console.log("register successful",res)
-        axios.post(`https://us-central1-movieappfunctions1.cloudfunctions.net/expressApi/login`, {"email":user.email,"password":user.password}).then((res) => {
+        axios.post(`https://api-102678697812.us-central1.run.app/login`, {"email":user.email,"password":user.password}).then((res) => {
         setLoading(false)
         localStorage.setItem(`token`, res.data.token);
         localStorage.setItem(`id`, res.data.user.id);
